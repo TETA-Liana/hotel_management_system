@@ -1,30 +1,23 @@
-# User and Item Management System
+# Hotel Management System
 
-A full-stack application for managing users and items (products) with authentication and CRUD operations.
+A backend system built with Java and Spring Boot to manage hotel operations such as bookings, users, rooms, billing, and hotels.
 
 ## Tech Stack
 
-### Backend
-
+- Java 23
 - Spring Boot
 - Spring Data JPA
-- H2 Database (for development)
-- Java 17
-
-### Frontend
-
-- React.js
-- Axios for API calls
-- React Router for navigation
-- Tailwind CSS for styling
+- MySQL or H2 (for development)
+- Maven
 
 ## Project Structure
 
-```
 management-system/
-├── backend/           # Spring Boot application
-└── frontend/         # React application
-```
+└── backend/ # Spring Boot hotel management backend
+
+shell
+Copy
+Edit
 
 ## Setup Instructions
 
@@ -33,51 +26,58 @@ management-system/
 1. Navigate to the backend directory:
    ```bash
    cd backend
-   ```
-2. Build the project:
-   ```bash
-   ./mvnw clean install
-   ```
-3. Run the application:
-   ```bash
-   ./mvnw spring-boot:run
-   ```
-   The backend will start on http://localhost:8080
+Build the project:
 
-### Frontend Setup
+bash
+Copy
+Edit
+./mvnw clean install
+Run the application:
 
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-   The frontend will start on http://localhost:3000
+bash
+Copy
+Edit
+./mvnw spring-boot:run
+The backend will start on http://localhost:8080
 
-## Features
+Features
+User registration and management
 
-- User Authentication (Signup/Login)
-- Product Management (CRUD operations)
-- Responsive UI with Tailwind CSS
-- Session-based authentication
+Room availability and assignment
 
-## API Endpoints
+Hotel and room listings
 
-### Authentication
+Booking creation and tracking
 
-- POST /api/auth/signup - Register new user
-- POST /api/auth/login - User login
+Billing and invoice handling
 
-### Products
+Custom exception handling and validation
 
-- GET /api/products - Get all products
-- POST /api/products - Create new product
-- GET /api/products/{id} - Get product by ID
-- PUT /api/products/{id} - Update product
-- DELETE /api/products/{id} - Delete product
+API Endpoints
+User
+POST /api/users - Create new user
+
+GET /api/users/{id} - Get user by ID
+
+Room
+POST /api/rooms - Add new room
+
+GET /api/rooms - Get all rooms
+
+GET /api/rooms/{id} - Get room by ID
+
+Hotel
+POST /api/hotels - Add new hotel
+
+GET /api/hotels - List all hotels
+
+Booking
+POST /api/bookings - Create a booking
+
+GET /api/bookings/{id} - Get booking details
+
+Billing
+POST /api/bills - Generate a bill
+
+GET /api/bills/{id} - Get billing info
+
